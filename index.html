@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Turquoise Hub</title>
-    <!-- Load Poppins font (Light/300 and Black/900 weights) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom colors and Inter/Poppins fonts -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'pastel-turquoise': '#A8E6CF', // Light Greenish-Blue
-                        'pastel-blue': '#DCEDC8',      // Very Light Mint
-                        'pastel-green': '#FFD3B5',     // Light Peach (as a warm accent)
-                        'primary': '#0D9488',          // Deep Teal/Cyan for text
-                        'secondary': '#0EA5E9',        // Bright Sky Blue
+                        'pastel-turquoise': '#A8E6CF',
+                        'pastel-blue': '#DCEDC8',
+                        'pastel-green': '#FFD3B5',
+                        'primary': '#0D9488',
+                        'secondary': '#0EA5E9',
                     },
                     fontFamily: {
-                        // Inter remains the default for body text
                         sans: ['Inter', 'sans-serif'],
-                        // Poppins is added for headers
                         'poppins': ['Poppins', 'sans-serif'],
                     },
                 }
@@ -31,20 +26,17 @@
         }
     </script>
     <style>
-        /* Custom styles to enhance the pastel look and feel */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F0FAF8; /* Very subtle light green background */
+            background-color: #F0FAF8;
         }
         .section-padding {
             padding: 4rem 1rem;
         }
         .scroll-mt-24 {
-            /* Offset for the fixed header */
             scroll-margin-top: 6rem;
         }
 
-        /* --- Scroll Reveal CSS for Fade-In Effect --- */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -54,10 +46,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /*
-        * Specific card hover effect for a bit of extra pop.
-        * Applied to both profile cards and memory cards for consistency.
-        */
         .profile-card:hover, .memory-card:hover {
             box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3), 0 4px 6px -2px rgba(13, 148, 136, 0.1);
             transform: translateY(-5px);
@@ -74,7 +62,6 @@
                 Turquoise <span class="text-secondary">2026</span>
             </a>
             <div class="space-x-4 flex items-center">
-                <!-- Added explicit Home link -->
                 <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Home</a>
                 <a href="#profile" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Class Profile</a>
                 <a href="#memories" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Memories</a>
@@ -85,37 +72,29 @@
 
     <main class="max-w-7xl mx-auto">
 
-        <!-- Hero Section -->
+        <!-- Welcome Section -->
         <section class="section-padding text-center bg-pastel-turquoise/40 rounded-b-3xl mb-12 shadow-xl">
-            <!-- H1 updated with font-poppins -->
             <h1 class="text-5xl sm:text-7xl font-poppins font-black text-primary mb-4">
                 Welcome to the Website of Turquoise 2026
             </h1>
-            <!-- Added font-light class here -->
             <p class="text-xl text-gray-700 max-w-3xl mx-auto font-poppins font-light">
                 The official website of Apricot Batch 25 and Turquoise Batch 26
             </p>
         </section>
 
-        <!-- 1. Class Profile Section - Now features individual student profiles (fixed content) -->
+        <!-- Class Profile Section -->
         <section id="profile" class="section-padding scroll-mt-24">
-            <!-- H2 updated with font-poppins -->
             <h2 class="text-4xl font-poppins font-bold text-center mb-12 text-secondary border-b-4 border-pastel-blue pb-3 mx-auto max-w-md">
                 Meet the Class
             </h2>
-
-            <!-- Grid updated to lg:grid-cols-4 to show four profiles -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 scroll-reveal">
                 
                 <!-- Profile Card: Erik -->
-                <!-- Added h-full block to ensure the card (link) fills the grid cell height -->
                 <a href="profile.html#boys-section" class="memory-link h-full block">
-                <!-- Added h-full flex flex-col to force the content to stretch vertically -->
                 <div class="profile-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan-500 text-center transition duration-300 cursor-pointer h-full flex flex-col">
                     <img src="https://placehold.co/100x100/A8E6CF/primary?text=E" alt="Erik Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-pastel-turquoise">
                     <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Erik Miguel Dela Vega</h3>
                     <p class="text-sm text-sky-500 mb-2 font-medium">Aspiring Pokpok</p>
-                    <!-- Added mt-auto to push the quote to the bottom of the now-equal height card -->
                     <p class="text-gray-600 text-sm italic mt-auto">
                         "Sanaol mapanghe"
                     </p>
@@ -123,14 +102,11 @@
                 </a>
 
                 <!-- Profile Card: Jade -->
-                 <!-- Added h-full block to ensure the card (link) fills the grid cell height -->
                  <a href="profile.html#boys-section" class="memory-link h-full block">
-                 <!-- Added h-full flex flex-col to force the content to stretch vertically -->
                 <div class="profile-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500 text-center transition duration-300 cursor-pointer h-full flex flex-col">
                     <img src="https://placehold.co/100x100/DCEDC8/primary?text=J" alt="Jade Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-pastel-blue">
                     <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Jade Jonash Deloso</h3>
                     <p class="text-sm text-teal-500 mb-2 font-medium">Future Taga-Bj</p>
-                    <!-- Added mt-auto to push the quote to the bottom of the now-equal height card -->
                     <p class="text-gray-600 text-sm italic mt-auto">
                         "Putanginamo"
                     </p>
@@ -138,14 +114,11 @@
                 </a>
 
                 <!-- Profile Card: Lian -->
-                <!-- Added h-full block to ensure the card (link) fills the grid cell height -->
                 <a href="profile.html#girls-section" class="memory-link h-full block">
-                <!-- Added h-full flex flex-col to force the content to stretch vertically -->
                 <div class="profile-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-sky-500 text-center transition duration-300 cursor-pointer h-full flex flex-col">
                     <img src="https://placehold.co/100x100/FFD3B5/primary?text=L" alt="Lian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-pastel-green">
                     <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Lian Gabriel Arcega</h3>
                     <p class="text-sm text-cyan-500 mb-2 font-medium">Katseye Member</p>
-                    <!-- Added mt-auto to push the quote to the bottom of the now-equal height card -->
                     <p class="text-gray-600 text-sm italic mt-auto">
                         "Kakambal ni Lara"
                     </p>
@@ -153,14 +126,11 @@
                 </a>
 
                 <!-- Profile Card: Dolly (NEW 4th Card) -->
-                                  <!-- Added h-full block to ensure the card (link) fills the grid cell height -->
                   <a href="profile.html#girls-section" class="memory-link h-full block">
-                  <!-- Added h-full flex flex-col to force the content to stretch vertically -->
                 <div class="profile-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-pastel-green text-center transition duration-300 cursor-pointer h-full flex flex-col">
                     <img src="https://placehold.co/100x100/A8E6CF/primary?text=D" alt="Dolly Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-pastel-turquoise">
                     <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Dolly Antoneth Bolinas</h3>
                     <p class="text-sm text-sky-500 mb-2 font-medium">Batak Mangpatong</p>
-                    <!-- Added mt-auto to push the quote to the bottom of the now-equal height card -->
                     <p class="text-gray-600 text-sm italic mt-auto">
                         "Kabit ni Kier"
                     </p>
@@ -168,23 +138,19 @@
                 </a>
             </div>
 
-            <!-- View All Profiles Button -->
             <div class="text-center mt-12 scroll-reveal">
-                <!-- Updated href to link to the separate profiles.html file -->
                 <a href="profile.html" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-teal-700 transition duration-300 shadow-xl hover:scale-[1.03] active:scale-[0.98]">
                     View All Class Profiles
                 </a>
             </div>
         </section>
 
-        <!-- 2. Memories Section - Now a fixed carousel -->
+        <!-- 2. Memories Section-->
         <section id="memories" class="section-padding scroll-mt-24 bg-pastel-blue/40 rounded-xl my-12 shadow-inner">
-            <!-- H2 updated with font-poppins -->
             <h2 class="text-4xl font-poppins font-bold text-center mb-12 text-primary border-b-4 border-pastel-turquoise pb-3 mx-auto max-w-md">
                 Memories Carousel
             </h2>
 
-            <!-- Grid adjusted to lg:grid-cols-4 to show four memories -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 scroll-reveal">
                 
                 <!-- Activities Card -->
@@ -239,12 +205,10 @@
 
         <!-- 3. About Us Section -->
         <section id="about" class="section-padding scroll-mt-24">
-            <!-- H2 updated with font-poppins -->
             <h2 class="text-4xl font-poppins font-bold text-center mb-12 text-secondary border-b-4 border-pastel-green pb-3 mx-auto max-w-md">
                 About Our Class
             </h2>
             
-            <!-- Added scroll-reveal class -->
             <div class="max-w-4xl mx-auto bg-pastel-turquoise/20 p-8 rounded-xl shadow-lg border-l-8 border-secondary scroll-reveal">
                 <p class="text-lg text-gray-700 mb-6 leading-relaxed font-poppins font-light">
                     This website was created by the Turquoise web builders to serve as a central, fun, and reliable hub for everyone. Our mission is to keep our community connected, share important class news, and preserve the wonderful journey we've all shared over the years. We believe in unity, friendship, and collaboration.
@@ -278,7 +242,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Scroll Reveal (Intersection Observer) -->
     <script>
         // Wait for the entire page content to load before running the script
         document.addEventListener("DOMContentLoaded", function() {

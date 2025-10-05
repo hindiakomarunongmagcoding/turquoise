@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Profiles - Turquoise Hub</title>
-    <!-- Load Poppins font (Black/900 weight) for headers -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom colors and Inter/Poppins fonts -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'pastel-turquoise': '#A8E6CF', // Light Greenish-Blue (Keep for hero/general accent)
-                        'pastel-blue': '#DCEDC8',      // This was Very Light Mint, will keep for now but not use on cards
-                        'pastel-green': '#FFD3B5',     // This was Light Peach, will keep for now but not use on cards
-                        'primary': '#0D9488',          // Deep Teal/Cyan for text
-                        'secondary': '#0EA5E9',        // Bright Sky Blue
+                        'pastel-turquoise': '#A8E6CF',
+                        'pastel-blue': '#DCEDC8',
+                        'pastel-green': '#FFD3B5',
+                        'primary': '#0D9488',
+                        'secondary': '#0EA5E9',
 
-                        // NEW GENDER-SPECIFIC COLORS
-                        'boy-card-bg': '#ECF5FB',      // Very Light Blue
-                        'boy-card-accent': '#5689DC',  // Medium Blue for borders/text
-                        'girl-card-bg': '#FEEAF1',     // Very Light Pink
-                        'girl-card-accent': '#F06292', // Medium Pink for borders/text
+                        'boy-card-bg': '#ECF5FB',
+                        'boy-card-accent': '#5689DC',
+                        'girl-card-bg': '#FEEAF1',
+                        'girl-card-accent': '#F06292',
                     },
                     fontFamily: {
-                        // Inter remains the default for body text
                         sans: ['Inter', 'sans-serif'],
-                        // Poppins is added for headers
                         'poppins': ['Poppins', 'sans-serif'],
                     },
                 }
@@ -37,20 +31,17 @@
         }
     </script>
     <style>
-        /* Custom styles to match the main index page */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F0FAF8; /* Very subtle light green background */
+            background-color: #F0FAF8;
         }
         .section-padding {
             padding: 4rem 1rem;
         }
         .scroll-mt-24 {
-            /* Offset for the fixed header */
             scroll-margin-top: 6rem;
         }
 
-        /* --- Scroll Reveal CSS for Fade-In Effect --- */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -60,9 +51,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Specific card hover effect for a bit of extra pop */
         .profile-card:hover {
-            /* Use the primary color for the hover shadow */
             box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3), 0 4px 6px -2px rgba(13, 148, 136, 0.1);
             transform: translateY(-5px);
         }
@@ -70,14 +59,12 @@
 </head>
 <body>
 
-    <!-- Navigation Header - Adjusted links to point to index.html sections or the current page -->
     <header class="sticky top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="index.html" class="text-3xl font-extrabold font-poppins text-primary tracking-tight">
                 Turquoise <span class="text-secondary">2026</span>
             </a>
             <div class="space-x-4 flex items-center">
-                <!-- HOME LINK -->
                 <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Home</a> 
                 <a href="profile.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Class Profile</a>
                 <a href="memories.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Memories</a>
@@ -88,7 +75,7 @@
 
     <main class="max-w-7xl mx-auto">
 
-        <!-- Hero Banner for Profile Page -->
+        <!-- Welcome Banner for Profile Page -->
         <section class="section-padding text-center bg-pastel-turquoise/40 rounded-b-3xl mb-12 shadow-xl">
             <h1 class="text-5xl sm:text-7xl font-poppins font-black text-primary mb-4">
                 The Turquoise 2026 Batch
@@ -98,22 +85,20 @@
             </p>
         </section>
 
-        <!-- Class Profiles Section (Full Page Content) -->
+        <!-- Class Profiles Section-->
         <section id="full-profile" class="section-padding scroll-mt-24">
             <h2 class="text-4xl font-poppins font-bold text-center mb-16 text-secondary border-b-4 border-pastel-blue pb-3 mx-auto max-w-lg">
                 Full Class Roster
             </h2>
 
             <!-- BOYS SECTION -->
-            <!-- ADDED ID for quick navigation -->
             <div id="boys-section" class="mb-16 scroll-reveal scroll-mt-24">
                 <h3 class="text-3xl font-poppins font-bold text-primary mb-8 border-l-4 border-primary pl-4">
                     MGA SAH
                 </h3>
-                <!-- Grid adjusted to show max 4 columns (lg:grid-cols-4) and 2 columns on mobile (sm:grid-cols-2) -->
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
                     
-                    <!-- Profile Card: Erik (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Erik -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
                         <img src="Profile - Erik.png" alt="Erik Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Erik Miguel Dela Vega</h3>
@@ -123,9 +108,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Jade (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Jade -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/DCEDC8/primary?text=J" alt="Jade Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="" alt="Jade Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Jade Jonash Deloso</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -133,9 +118,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Don (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Don -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=D" alt="Lian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="profile - don." alt="Don Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Don Eduardo Garboso</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -143,9 +128,9 @@
                         </p>
                     </div>
                     
-                    <!-- Profile Card: Carl (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Carl -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/A8E6CF/primary?text=C" alt="Rico Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="Profile - Carl.jpg" alt="Carl Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Carl Angelo Garcia</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -153,9 +138,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Carlo (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Juanito -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/DCEDC8/primary?text=J" alt="Carlo Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="profile - juan." alt="Juan Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Juanito Cristopher Macatol</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -163,9 +148,9 @@
                         </p>
                     </div>
                     
-                    <!-- Profile Card: Ethan (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Ethan -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Ethan Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Ethan James Madrona</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -173,9 +158,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Tristan (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Tristan -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Tristan Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Tristan Magallon</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -183,9 +168,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: John Lee (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: John Lee -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Lee Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">John Lee Magano</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -193,9 +178,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: August (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: August -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="Profile - August.jpg" alt="August Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Augustine Josh Marceno</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -203,9 +188,9 @@
                         </p>
                     </div>
                     
-                    <!-- Profile Card: James (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: James -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="James Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">James Merin</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -213,9 +198,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Christian (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Christian -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Christian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Christian Mingo</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -223,9 +208,19 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Johnson (PASTEL BLUE SCHEME) -->
+                     <!-- Profile Card: Clive -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="Profile - Clive.jpg" alt="Clive Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Clive Dale Mingoa</h3>
+                        <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
+                        <p class="text-gray-600 text-sm italic">
+                            "Quote"
+                        </p>
+                    </div>
+
+                    <!-- Profile Card: Johnson -->
+                    <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Johnson Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Johnson Roi Mirabete</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -233,9 +228,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Emman (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Emman -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Emman Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Emmanuel John Morada</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -243,9 +238,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Nick (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Nick -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Nick Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Nick Stephen Razonable</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -253,9 +248,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Mark (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Mark -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Mark Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Mark Xaviour Sandoval</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -263,9 +258,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Francis (PASTEL BLUE SCHEME) -->
+                    <!-- Profile Card: Francis -->
                     <div class="profile-card bg-boy-card-bg p-6 rounded-xl shadow-lg border-t-4 border-boy-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=E" alt="Adrian Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
+                        <img src="Profile - Francis.jpg" alt="Francis Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-boy-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">John Francis Sumalinog</h3>
                         <p class="text-sm text-boy-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -298,7 +293,7 @@
 
                     <!-- Profile Card: Dolly (PASTEL PINK SCHEME) -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/DCEDC8/primary?text=D" alt="Sarah Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Dolly.JPG" alt="Dolly Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Dolly Antoneth Bolinas</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -308,7 +303,7 @@
 
                     <!-- Profile Card: Bea (PASTEL PINK SCHEME) -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=B" alt="Mika Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Bea.webp" alt="Mika Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Bea Mae caguioa</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -336,9 +331,9 @@
                         </p>
                     </div>
                     
-                    <!-- Profile Card: Chloe (PASTEL PINK SCHEME) -->
+                    <!-- Profile Card: Chloe -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Chloe.jpg" alt="Chloe Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Chloe Nouvel Fallarcuna</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -366,10 +361,30 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Precious (PASTEL PINK SCHEME) -->
+                    <!-- Profile Card: Precious -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
                         <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Precious Emerald Mallen</h3>
+                        <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
+                        <p class="text-gray-600 text-sm italic">
+                            "Quote"
+                        </p>
+                    </div>
+
+                    <!-- Profile Card: Cariz  -->
+                    <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Cariz Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Cariz Geanne Manipol</h3>
+                        <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
+                        <p class="text-gray-600 text-sm italic">
+                            "Quote"
+                        </p>
+                    </div>
+
+                    <!-- Profile Card: Aia -->
+                    <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
+                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Aia Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Precious Danaia Marin</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
                             "Quote"
@@ -386,9 +401,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Ashana (PASTEL PINK SCHEME) -->
+                    <!-- Profile Card: Ashana -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Ashana.jpg" alt="Ashana Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Ashana Denise Montero</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -396,9 +411,9 @@
                         </p>
                     </div>
 
-                    <!-- Profile Card: Orence (PASTEL PINK SCHEME) -->
+                    <!-- Profile Card: Orence -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Orence. Montojo.jpg" alt="Orence Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Mariam Orence Rose Montojo</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -438,7 +453,7 @@
 
                     <!-- Profile Card: Reign (PASTEL PINK SCHEME) -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Reign.jpg" alt="Reign Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Reign Riva</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -458,7 +473,7 @@
 
                     <!-- Profile Card: Shane (PASTEL PINK SCHEME) -->
                     <div class="profile-card bg-girl-card-bg p-6 rounded-xl shadow-lg border-t-4 border-girl-card-accent text-center transition duration-300 cursor-pointer">
-                        <img src="https://placehold.co/100x100/FFD3B5/primary?text=C" alt="Joyce Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
+                        <img src="Profile - Shane.jpg" alt="Shane Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-girl-card-accent">
                         <h3 class="text-xl font-poppins font-semibold text-primary mb-1">Danica Shane Solis</h3>
                         <p class="text-sm text-girl-card-accent mb-2 font-medium">Ambition</p>
                         <p class="text-gray-600 text-sm italic">
@@ -484,7 +499,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Scroll Reveal (Intersection Observer) -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = {

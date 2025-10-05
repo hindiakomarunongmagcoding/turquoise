@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Memories - Turquoise 2026</title>
-    <!-- Load Poppins font (Light/300 and Black/900 weights) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom colors and Inter/Poppins fonts -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'pastel-turquoise': '#A8E6CF', // Light Greenish-Blue
-                        'pastel-blue': '#DCEDC8',      // Very Light Mint
-                        'pastel-green': '#FFD3B5',     // Light Peach (as a warm accent)
-                        'primary': '#0D9488',          // Deep Teal/Cyan for text
-                        'secondary': '#0EA5E9',        // Bright Sky Blue
+                        'pastel-turquoise': '#A8E6CF',
+                        'pastel-blue': '#DCEDC8',
+                        'pastel-green': '#FFD3B5',
+                        'primary': '#0D9488',
+                        'secondary': '#0EA5E9',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -29,10 +26,9 @@
         }
     </script>
     <style>
-        /* Custom styles to enhance the pastel look and feel */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F0FAF8; /* Very subtle light light background */
+            background-color: #F0FAF8;
         }
         .section-padding {
             padding: 4rem 1rem;
@@ -41,24 +37,21 @@
             scroll-margin-top: 6rem;
         }
         
-        /* --- Carousel Specific Styles --- */
         .carousel-container {
             width: 100%;
             overflow: hidden;
-            border-radius: 1.5rem; /* rounded-3xl */
-            box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3); /* primary shadow */
-            position: relative; /* Needed for positioning the arrows */
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3);
+            position: relative;
         }
         .carousel-track {
             display: flex;
-            /* Smooth transition for manual sliding */
             transition: transform 0.5s ease-in-out; 
-            /* Removed CSS animation for continuous sliding */
         }
         .carousel-slide {
-            flex: 0 0 100%; /* Each slide takes full container width */
+            flex: 0 0 100%;
             position: relative;
-            height: 400px; /* Fixed height for the carousel images */
+            height: 400px;
         }
         .carousel-track img {
             width: 100%;
@@ -66,7 +59,6 @@
             object-fit: cover;
         }
 
-        /* Styling for the navigation buttons */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -74,7 +66,7 @@
             z-index: 10;
             background-color: rgba(255, 255, 255, 0.7);
             padding: 1rem;
-            border-radius: 9999px; /* fully rounded */
+            border-radius: 9999px;
             transition: background-color 0.2s, transform 0.2s;
             cursor: pointer;
         }
@@ -86,7 +78,6 @@
             transform: translateY(-50%) scale(0.95);
         }
         
-        /* --- Scroll Reveal CSS for Fade-In Effect --- */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -100,9 +91,10 @@
 </head>
 <body>
 
-    <!-- Navigation Header (Use the same structure as index.html) -->
+    <!-- Navigation Header-->
     <header class="sticky top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+
             <!-- Link back to the home page -->
             <a href="index.html" class="text-3xl font-extrabold font-poppins text-primary tracking-tight">
                 Turquoise <span class="text-secondary">2026</span>
@@ -110,8 +102,7 @@
             <div class="space-x-4 flex items-center">
                 <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Home</a>
                 <a href="profile.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Class Profile</a>
-                <!-- Active link for Memories -->
-                <a href="memories.html" class="text-lg font-medium text-white bg-primary transition duration-150 p-2 rounded-lg">Memories</a>
+                <a href="memories.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">Memories</a>
                 <a href="about.html" class="text-lg font-medium text-gray-600 hover:text-primary transition duration-150 p-2 rounded-lg hover:bg-pastel-turquoise/50">About Us</a>
             </div>
         </nav>
@@ -129,9 +120,8 @@
             </p>
         </section>
 
-        <!-- Dynamic Slideshow Carousel Section -->
+        <!-- Slideshow Carousel Section -->
         <section class="px-4 sm:px-6 lg:px-8 pb-12">
-            <!-- Carousel Container -->
             <div class="carousel-container relative">
                 <div class="carousel-track" id="carouselTrack">
                     <!-- Slide 1 -->
@@ -164,13 +154,12 @@
             </div>
         </section>
 
-        <!-- Categorized Sections -->
         <div id="explore-albums" class="bg-white rounded-xl shadow-lg p-6 sm:p-12 mb-16 mx-4 sm:mx-6 lg:mx-8">
             <h2 class="text-4xl font-poppins font-bold text-center mb-12 text-primary border-b-4 border-pastel-turquoise pb-3 mx-auto max-w-lg">
                 Explore Our Albums
             </h2>
 
-            <!-- 1. Activities Section -->
+            <!-- Activities Section -->
             <section id="activities" class="scroll-mt-24 pb-12 border-b border-pastel-blue mb-12 scroll-reveal">
                 <h3 class="text-3xl font-poppins font-semibold text-secondary mb-8">Activities</h3>
                 <p class="text-lg text-gray-600 mb-6 max-w-4xl">
@@ -204,7 +193,7 @@
                 </div>
             </section>
 
-            <!-- 2. Gala Section -->
+            <!-- Gala Section -->
             <section id="gala" class="scroll-mt-24 pb-12 border-b border-pastel-blue mb-12 scroll-reveal">
                 <h3 class="text-3xl font-poppins font-semibold text-secondary mb-8">Gala</h3>
                 <p class="text-lg text-gray-600 mb-6 max-w-4xl">
@@ -238,7 +227,7 @@
                 </div>
             </section>
 
-            <!-- 3. Class Pictures Section -->
+            <!-- Class Pictures Section -->
             <section id="classpictures" class="scroll-mt-24 pb-12 border-b border-pastel-blue mb-12 scroll-reveal">
                 <h3 class="text-3xl font-poppins font-semibold text-secondary mb-8">Class Pictures</h3>
                 <p class="text-lg text-gray-600 mb-6 max-w-4xl">
@@ -272,7 +261,7 @@
                 </div>
             </section>
 
-            <!-- 4. Random Section -->
+            <!-- Random Section -->
             <section id="random" class="scroll-mt-24 scroll-reveal">
                 <h3 class="text-3xl font-poppins font-semibold text-secondary mb-8">Random Adventures</h3>
                 <p class="text-lg text-gray-600 mb-6 max-w-4xl">
@@ -308,14 +297,13 @@
         </div>
     </main>
 
-    <!-- Footer (Copied from index.html) -->
+    <!-- Footer-->
     <footer class="mt-16 bg-primary py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white text-sm">
             &copy; Turquoise Class 2026 Archives. All rights reserved.
         </div>
     </footer>
 
-    <!-- JavaScript for Carousel Control and Scroll Reveal -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // --- Carousel Logic ---
